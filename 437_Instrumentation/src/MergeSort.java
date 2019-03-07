@@ -2,6 +2,8 @@ class MergeSort extends SortAlgorithm
 {
 	void sort(int a[], int lo, int hi, int scratch[])
 	{
+
+		
 		super.updateAllViews(lo, hi);
 		
 		if (super.stopRequested)
@@ -50,12 +52,20 @@ class MergeSort extends SortAlgorithm
 			super.activeMarker = k;
 			super.updateAllViews();
 		}
+		
 	}
 
 	void sort(int a[])
 	{
+		//Start Timing
+		Instrumentation ins = Instrumentation.Instance();
+		ins.startTiming("MergeSort");
+		
 		int scratch[] = new int[a.length];
 		sort(a, 0, a.length - 1, scratch);
 		super.updateAllViews(-1, -1);
+		
+		//Stop Timing
+		ins.stopTiming("MergeSort");
 	}
 }

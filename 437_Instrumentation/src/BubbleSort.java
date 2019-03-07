@@ -5,7 +5,10 @@ class BubbleSort extends SortAlgorithm
 {
 	void sort(int a[])
 	{
+		//Start Timing
 		Instrumentation ins = Instrumentation.Instance();
+		ins.startTiming("BubbleSort");
+		
 		for (int i = a.length; --i >= 0;)
 		{
 			boolean flipped = false;
@@ -37,5 +40,7 @@ class BubbleSort extends SortAlgorithm
 		}
 		
 		super.updateAllViews(-1, -1);
+		//Stop Timing
+		ins.stopTiming("BubbleSort");
 	}
 }

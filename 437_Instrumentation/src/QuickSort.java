@@ -94,7 +94,14 @@ class QuickSort extends SortAlgorithm
 
 	void sort(int a[])
 	{
+		//Start Timing
+		Instrumentation ins = Instrumentation.Instance();
+		ins.startTiming("QuickSort");
+		
 		sort(a, 0, a.length - 1);
 		super.updateAllViews(-1, -1);
+		
+		//Stop Timing
+		ins.stopTiming("QuickSort");
 	}
 }
