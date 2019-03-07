@@ -1,0 +1,13 @@
+STARTTIMING:main
+| STARTTIMING:populateArray
+| STOPTIMING:populateArray 7ms
+| STARTTIMING:BubbleSort
+| STOPTIMING:BubbleSort 244ms
+| STARTTIMING:QuickSort
+| STOPTIMING:QuickSort 2ms
+| STARTTIMING:SelectionSort
+| STOPTIMING:SelectionSort 142ms
+| STARTTIMING:MergeSort
+| STOPTIMING:MergeSort 6ms
+STOPTIMING:main 401ms
+COMMENT: Testing the sorting algorithms

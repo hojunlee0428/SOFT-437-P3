@@ -16,6 +16,8 @@ class BubbleSort extends SortAlgorithm
 			{
 				if (stopRequested)
 				{
+					//Stop Timing
+					ins.stopTiming("BubbleSort");
 					return;
 				}
 				super.compares++;
@@ -33,6 +35,8 @@ class BubbleSort extends SortAlgorithm
 			if (!flipped)
 			{
 				super.updateAllViews(-1, -1);
+				//Stop Timing
+				ins.stopTiming("BubbleSort");
 				return;
 			}
 			super.hiMarker = i;

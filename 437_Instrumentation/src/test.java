@@ -1,3 +1,5 @@
+/* Test class to test the performance of the sorting algorithms*/
+
 import java.util.Random;
 
 public class test {
@@ -5,11 +7,12 @@ public class test {
 	public static void main(String[] args) {
 		Instrumentation ins = Instrumentation.Instance();
 		ins.activate(true);
-		/*
-		ins.startTiming("Instrumentation");
-		ins.stopTiming("Instrumentation");
-		ins.dump("Inst.log");
-		*/
+		
+		//Make instance of sorting algorithms since they are not static
+		BubbleSort BSort = new BubbleSort();
+		QuickSort QSort = new QuickSort();
+		SelectionSort SSort = new SelectionSort();
+		MergeSort MSort = new MergeSort();
 		
 		ins.startTiming("main");
 		
@@ -17,12 +20,18 @@ public class test {
 		int[] arr = populateArray();
 		ins.stopTiming("populateArray");
 		
-		BubbleSort.sort(arr);
 		
+		BSort.sort(arr);
+		QSort.sort(arr);
+		SSort.sort(arr);
+		MSort.sort(arr);
 		
+		ins.stopTiming("main");
+		ins.comment("Testing the sorting algorithms");
+		ins.dump("output.log");
 	}
 	
-	public int[] populateArray() {
+	public static int[] populateArray() {
 		
 		int[] array = new int[10000];
 		for(int i = 0; i < array.length; i++) {

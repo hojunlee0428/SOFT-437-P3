@@ -19,6 +19,8 @@ class SelectionSort extends SortAlgorithm
 			{
 				if (stopRequested)
 				{
+					//Stop Timing
+					ins.stopTiming("BubbleSort");
 					return;
 				}
 

@@ -38,12 +38,12 @@ public class Instrumentation {
 		log += indent + "STARTTIMING:" + comment + "\n";
 		runningInst.add(comment);
 		startTime.add(System.currentTimeMillis());
-		
 	}
 	
 
 	//Stop timing the method
 	public void stopTiming(String comment) {
+
 		if(!isActive) {
 			return;
 		}
