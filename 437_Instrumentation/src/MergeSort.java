@@ -57,6 +57,7 @@ class MergeSort extends SortAlgorithm
 
 	void sort(int a[])
 	{
+		
 		//Start Timing
 		Instrumentation ins = Instrumentation.Instance();
 		ins.startTiming("MergeSort");

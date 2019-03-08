@@ -1,0 +1,14 @@
+COMMENT: populateArray Running Time Test
+STARTTIMING:populateArray
+STOPTIMING:populateArray 8ms
+STARTTIMING:main
+| STARTTIMING:BubbleSort
+| STOPTIMING:BubbleSort 286ms
+| STARTTIMING:QuickSort
+| STOPTIMING:QuickSort 2ms
+| STARTTIMING:SelectionSort
+| STOPTIMING:SelectionSort 168ms
+| STARTTIMING:MergeSort
+| STOPTIMING:MergeSort 5ms
+STOPTIMING:main 461ms
+COMMENT: Testing the sorting algorithms with instrumentation added

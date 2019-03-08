@@ -2,6 +2,7 @@ class SelectionSort extends SortAlgorithm
 {
 	void sort(int a[])
 	{
+		
 		//Start Timing
 		Instrumentation ins = Instrumentation.Instance();
 		ins.startTiming("SelectionSort");
